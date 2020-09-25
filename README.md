@@ -1,11 +1,11 @@
 # logger_sdk
 
-##Clever Tap In-house
+## Clever Tap In-house
 
-##Problem Statement-
+## Problem Statement-
 Currently we are using Clever Tap for analytics purposes throughout the systems which is a third party tool, comes very expensive and it’s not queryable.
 
-##Limitations
+## Limitations
 
 Currently, we are not able to use the full potential of our inhouse data platform as the client does not have a mechanism to push the data directly to Clever Tap.
 We consume these data indirectly by syncing data from clever tap to our systems.
@@ -13,7 +13,7 @@ Though clevertap does provide some good features, it also misses out on a few im
 
 Very short size payload can be sent which makes it very hard for debugging purposes.
 
-##Usages
+## Usages
 Since we are heavily betting on Flutter. It’s very expandable for integration in  both Mobile and Web.
 Queryable, We can have in-house customised data and graphs for debug, analytics purposes. For app debugging we can query by task id or timing of the day.
 Battery Saving, Runs fixed configurable time frequency  to make sure it is battery friendly through Work Manager.
