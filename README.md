@@ -1,6 +1,4 @@
-# logger_sdk
-
-## Clever Tap In-house
+# Clever Tap In-house
 
 ## Problem Statement-
 Currently we are using Clever Tap for analytics purposes throughout the systems which is a third party tool, comes very expensive and it’s not queryable.
@@ -18,4 +16,9 @@ Since we are heavily betting on Flutter. It’s very expandable for integration 
 Queryable, We can have in-house customised data and graphs for debug, analytics purposes. For app debugging we can query by task id or timing of the day.
 Battery Saving, Runs fixed configurable time frequency  to make sure it is battery friendly through Work Manager.
 Offline caching of all events so saves all data in low connectivity zones.
-
+Impacts
+Will radically speed up debugging and hence, reduce the down time experienced on ground.
+With all other services recording logs in-house already, we will now be in a position to build a single dashboard to monitor all proceedings in the entire ecosystem of Hawkeye. This will greatly improve our visibility of events on ground and performance of features / services.
+It’s far  cheaper than Clevertap. Hurrah!
+Analytics latency will be reduced as events will be available in real time compared to a 24-hour wait in CT.
+Monitoring performance of A/B tests would become very convenient.
