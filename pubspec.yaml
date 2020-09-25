@@ -1,0 +1,25 @@
+name: logger_sdk
+description: A new Flutter package.
+version: 0.0.1
+author:
+homepage:
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+  flutter: ">=1.17.0 <2.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  sqflite:
+  flutter_bloc:
+  uuid: ^2.2.2
+  path_provider: ^1.6.18
+  workmanager: ^0.2.3
+  http:
+
+flutter:
