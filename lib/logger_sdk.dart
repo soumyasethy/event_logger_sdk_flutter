@@ -15,10 +15,7 @@ void sendAnalyticsEvent(String eventName, {dynamic value}) {
 
 void runJob() async {
   List<LoggerModel> data = await eventLogger.getPendingEvents();
-
-  // print(body);
   var response = await postEvent(data);
-  // print(response);
   if (response.statusCode == 200) {
     data.forEach((event) {
       eventLogger.deleteLoggerModel(event.entityId);
@@ -28,7 +25,6 @@ void runJob() async {
 
 void callbackDispatcher() {
   Workmanager.executeTask((task, inputData) async {
-    // print("Native called background task: ");
     runJob();
     return Future.value(true);
   });
