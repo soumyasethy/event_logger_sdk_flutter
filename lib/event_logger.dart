@@ -3,6 +3,9 @@ import 'package:logger_sdk/db/db.dart';
 import 'package:uuid/uuid.dart';
 
 class EventLogger with DBHelper {
+  static String url = '';
+  static String token = '';
+
   void pushEvent(eventName, {dynamic value}) {
     if (value != null) {
       value = value.toString();

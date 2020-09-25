@@ -30,7 +30,9 @@ void callbackDispatcher() {
   });
 }
 
-void initEventLogger() {
+void initEventLogger({int frequency = 15, url, token}) {
+  EventLogger.url = url;
+  EventLogger.token = token;
   Workmanager.initialize(callbackDispatcher, isInDebugMode: true);
   // Periodic task registration
   Workmanager.registerPeriodicTask(
@@ -38,18 +40,18 @@ void initEventLogger() {
     "syncWithServer",
     // When no frequency is provided the default 15 minutes is set.
     // Minimum frequency is 15 min. Android will automatically change your frequency to 15 min if you have configured a lower frequency.
-    frequency: Duration(minutes: 15),
+    frequency: Duration(minutes: frequency),
   );
 }
 
 Future<http.Response> postEvent(List<dynamic> body) {
   return http.post(
-    'http://chimay_stag.bounce.bike/bulk_publish_records',
+    EventLogger.url,
     headers: <String, String>{
       'Content-Type': 'application/json; charset=UTF-8',
       'AppToken': 'ykD0aGLjXRecH521aqJk',
       'authkey': 'ykD0aGLjXRecH521aqJk',
-      'token': 'f3523c66-8782-11e8-8973-c329568ede24',
+      'token': EventLogger.token,
     },
     body: jsonEncode(body),
   );
